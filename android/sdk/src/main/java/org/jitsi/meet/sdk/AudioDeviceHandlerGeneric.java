@@ -16,6 +16,7 @@
 
 package org.jitsi.meet.sdk;
 
+import android.annotation.TargetApi;
 import android.media.AudioDeviceInfo;
 import android.media.AudioManager;
 
@@ -31,6 +32,7 @@ import org.jitsi.meet.sdk.log.JitsiMeetLogger;
  * default it's only used on versions < O, since versions >= O use ConnectionService, but it
  * can be disabled.
  */
+@TargetApi(23)
 class AudioDeviceHandlerGeneric implements
         AudioModeModule.AudioDeviceHandlerInterface,
         AudioManager.OnAudioFocusChangeListener {

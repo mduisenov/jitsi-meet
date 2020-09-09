@@ -19,6 +19,8 @@ package org.jitsi.meet.sdk;
 import android.app.Activity;
 import android.content.Intent;
 
+import androidx.core.app.ActivityCompat;
+
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactContext;
@@ -177,6 +179,6 @@ public class JitsiMeetActivityDelegate {
 
     public static void requestPermissions(Activity activity, String[] permissions, int requestCode, PermissionListener listener) {
         permissionListener = listener;
-        activity.requestPermissions(permissions, requestCode);
+        ActivityCompat.requestPermissions(activity, permissions, requestCode);
     }
 }
