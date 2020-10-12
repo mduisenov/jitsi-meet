@@ -149,8 +149,8 @@ class Conference extends AbstractConference<Props, *> {
             <Container style = { styles.conference }>
                 <StatusBar
                     barStyle = 'light-content'
-                    hidden = { true }
-                    translucent = { true } />
+                    hidden = { false }
+                    translucent = { false } />
                 { this._renderContent() }
             </Container>
         );

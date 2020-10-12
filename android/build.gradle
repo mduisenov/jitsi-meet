@@ -27,6 +27,7 @@ allprojects {
         jcenter()
         // React Native (JS, Obj-C sources, Android binaries) is installed from npm.
         maven { url "$rootDir/../node_modules/react-native/android" }
+        maven { url 'https://dl.bintray.com/almaata/maven' }
     }
 
     // Make sure we use the react-native version in node_modules and not the one
@@ -144,7 +145,7 @@ allprojects {
 ext {
     buildToolsVersion = "29.0.3"
     compileSdkVersion = 29
-    minSdkVersion    = 23
+    minSdkVersion    = 21
     targetSdkVersion = 29
     supportLibVersion = "28.0.0"
 
